@@ -1,4 +1,4 @@
-package main
+package workerpool
 
 import (
 	"context"
@@ -120,7 +120,7 @@ func generator(queue chan<- *Task, countT int, wg *sync.WaitGroup) {
 	close(queue)
 }
 
-func main() {
+func MainWorkerpool() {
 
 	var wg sync.WaitGroup
 
